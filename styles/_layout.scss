@@ -1,0 +1,393 @@
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  .header {
+    padding: 20px 0;
+    position: relative;
+    .logo {
+      width: 50%;
+      a {
+        display: block;
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png");
+        // width: 100%;
+        height: 40px;
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+        text-indent: -999%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      color: #ffffff;
+    }
+
+    .menu li {
+      padding: 8px 0;
+      a:hover {
+        opacity: 0.7;
+      }
+    }
+    .mobile-collapse {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      min-height: calc(100vh - 81px);
+      background-color: #000000;
+      border-top: 1px solid #ffffff;
+      .mobile-menu {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+
+        a {
+          font-size: 80px;
+          line-height: 1.2;
+          margin: 4px 0;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .mobile-footer {
+        padding: 32px 0;
+        border-top: 1px solid #ffffff;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        .social {
+          margin-top: 36px;
+          li + li {
+            margin-left: 20px;
+          }
+        }
+        a :first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .white-h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 80px;
+    padding-top: 160px;
+    margin-bottom: 80px;
+  }
+  .tools-search {
+    position: relative;
+    img {
+      position: absolute;
+      top: 35%;
+      left: 1.3%;
+    }
+    input[id="search"] {
+      width: 100%;
+      background: #f2f2f2;
+      border: none;
+      border-radius: 16px;
+      padding: 20px 40px;
+      font-size: 16px;
+    }
+  }
+  .tools-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 44px 0;
+    input[value="篩選"] {
+      background: #ffffff url("https://i.postimg.cc/g0GZcHNv/Vector-1.png")
+        no-repeat;
+      background-size: auto;
+      background-position: 75% center;
+      border: 1px solid #f2f2f2;
+      border-radius: 16px;
+      padding: 20px 60px 20px 40px;
+      font-size: 16px;
+      text-align: center;
+      &:hover {
+        border-color: #000000;
+      }
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        width: 75px;
+        text-align: center;
+        & + li {
+          margin-left: 10px;
+        }
+        a {
+          font-size: 16px;
+          color: #919191;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          padding: 20px 0;
+          &:hover {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: black;
+            border-radius: 16px;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    .dropdown {
+      position: relative;
+      .dropdown-btn {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        border: 1px solid #f2f2f2;
+        padding: 20px 32px 20px 40px;
+        border-radius: 16px;
+
+        &:hover {
+          border-color: #000000;
+        }
+      }
+      .dropdown-menu {
+        position: absolute;
+        right: 0;
+        display: none;
+        margin-top: 4px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        padding: 20px 0;
+        border-radius: 16px;
+        border: none;
+        text-align: center;
+        &.show {
+          display: block;
+        }
+        a {
+          display: block;
+          padding: 10px 0;
+          color: black;
+          &:hover {
+            background-color: #f2f2f2;
+          }
+        }
+      }
+    }
+  }
+  .tools-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    li {
+      width: 32%;
+      border: 1px solid #f2f2f2;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      // &:hover{
+      //   transform:scale(1.05);
+      // }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center center;
+        &:hover {
+          transform: scale(1.05);
+          // border-radius: 16px 16px 0 0;
+        }
+      }
+
+      .tools-description {
+        padding: 20px 32px;
+        border-bottom: 1px solid #f2f2f2;
+        flex-grow: 1;
+        h3 {
+          font-weight: 900;
+          font-size: 20px;
+          padding-bottom: 12px;
+        }
+        p {
+          // height:42px; 不要寫死
+          font-size: 14px;
+          line-height: 150%;
+          color: #525252;
+        }
+      }
+      .tools-ai {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 32px;
+        font-size: 16px;
+        border-bottom: 1px solid #f2f2f2;
+        :first-child {
+          font-weight: bold;
+        }
+      }
+      .tools-tag {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 32px;
+        font-size: 16px;
+        border-bottom: 1px solid #f2f2f2;
+        // img {
+        //   display: block;
+        //   width: 18px;
+        //   height: 20px;
+        // }
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 75px 0;
+
+    li {
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      a {
+        display: block;
+        width: 100%;
+        padding: 16px 0;
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          background: #020202;
+          border-radius: 16px;
+          color: white;
+        }
+      }
+    }
+  }
+  .sitemap {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding: 80px 0;
+    .sitemap-list li {
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 120%;
+    }
+    .sitemap-logo {
+      width: 18%;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .footer {
+    padding: 32px 0;
+    .social {
+      margin-left: -35%;
+
+      li + li {
+        margin-left: 20px;
+      }
+    }
+    a :first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+@keyframes imgUp {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    75% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+@media screen and (max-width: 768px) {
+  .container {
+    .header {
+      .logo a {
+        height: 50px;
+      }
+      .hamburger-menu {
+        display: block;
+      }
+      .mobile-collapse.show {
+        display: block;
+      }
+    }
+    .white-h2 {
+      padding-top: 80px;
+      margin-bottom: 50px;
+      font-size: 50px;
+    }
+    .tools-filter {
+      input[value="篩選"] {
+        order: 1;
+      }
+      .menu {
+        margin-top: 30px;
+        order: 3;
+        width: 100%;
+        li {
+          width: 20%;
+        }
+      }
+      .dropdown {
+        order: 2;
+      }
+    }
+    .tools-list li {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .pagination {
+      left: 10%;
+    }
+    .sitemap {
+      .sitemap-list {
+        font-size: 48px;
+        order: 1;
+        margin-top: 40px;
+      }
+      .sitemap-logo {
+        width: 50%;
+      }
+    }
+    .footer {
+      .social {
+        order: 1;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 36px;
+      }
+    }
+  }
+  .bg-white {
+    width: 100%;
+    border-radius: 20px;
+  }
+}

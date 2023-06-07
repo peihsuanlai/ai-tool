@@ -1,0 +1,170 @@
+.container {
+  .banner h3 {
+    width: 50%;
+    font-size: 48px;
+    line-height: 120%;
+    margin-top: 80px;
+    margin-bottom: 238px;
+  }
+  .pricing {
+    margin: 160px 0;
+    h2 {
+      font-size: 32px;
+      margin-bottom: 80px;
+      font-weight: 900;
+    }
+    &-card {
+      & > li {
+        border: 1px solid #525252;
+        border-radius: 16px;
+        width: 49.5%;
+        margin-bottom: 20px;
+        &:hover {
+          border-color: #ffffff;
+          transition: border-color 1.5s ease;
+        }
+        .cardInfo {
+          padding: 0 32px;
+          flex-grow: 1;
+          margin-bottom: 160px;
+          h3 {
+            font-size: 32px;
+            line-height: 120%;
+            margin: 12px 0;
+          }
+          ul {
+            li {
+              font-size: 16px;
+              line-height: 150%;
+            }
+          }
+        }
+        .priceInfo {
+          padding: 20px 32px;
+          border-top: 1px solid #525252;
+          .token {
+            color: #919191;
+          }
+        }
+      }
+    }
+  }
+  .policy {
+    margin-bottom: 160px;
+    h2 {
+      width: fit-content;
+      font-weight: 900;
+      font-size: 32px;
+      margin-bottom: 48px;
+      // border:1px solid yellow;
+    }
+    .statement {
+      width: fit-content;
+      // border:1px solid yellow;
+      li:not(:first-child) h3 {
+        margin-top: 24px;
+      }
+      li {
+        border-bottom: 1px solid #525252;
+        h3 {
+          font-weight: 900;
+          font-size: 48px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 32px;
+          margin: 24px 0;
+        }
+      }
+    }
+  }
+  .faq {
+    margin: 160px 0;
+    h2 {
+      font-weight: 900;
+      font-size: 32px;
+    }
+    .questions {
+      width: 65%;
+      & li:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      li {
+        border: 1px solid #525252;
+        border-radius: 16px;
+        padding: 20px 40px;
+        &:hover,
+        &.active {
+          border: 1px solid #ffffff;
+        }
+        .title {
+          font-weight: 900;
+          font-size: 20px;
+          line-height: 120%;
+          .question {
+            margin-left: 25px;
+          }
+        }
+        .answer {
+          font-size: 18px;
+          font-weight: 100;
+          margin-top: 10px;
+          display: none;
+          line-height: 150%;
+          &.show {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .banner h3 {
+      width: 70%;
+      font-size: 28px;
+    }
+    .pricing {
+      h2 {
+        font-size: 20px;
+        margin-bottom: 60px;
+      }
+      .pricing-card {
+        justify-content: center;
+        & > li {
+          width: 100%;
+        }
+      }
+    }
+    .policy {
+      margin-bottom: 120px;
+      h2 {
+        font-size: 20px;
+        width: 100%;
+      }
+      .statement {
+        width: 100%;
+        margin-top: 48px;
+        li h3 {
+          font-size: 32px;
+        }
+        li p {
+          font-size: 16px;
+          line-height: 150%;
+        }
+      }
+    }
+    .faq {
+      h2 {
+        font-size: 20px;
+        width: 100%;
+      }
+      .questions {
+        width: 100%;
+        margin-top: 80px;
+      }
+    }
+  }
+}
