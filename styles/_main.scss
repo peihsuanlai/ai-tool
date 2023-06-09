@@ -3,15 +3,18 @@
     margin-top: 80px;
     h2 {
       font-size: 120px;
-      line-height: 144px;
+      line-height: 120%;
       padding-left: 3px;
     }
-    a {
+    .check {
       padding: 20px 40px;
       border-radius: 16px;
       margin-top: 40px;
       margin-bottom: 100px;
       width: 160px;
+      background-color: transparent;
+      color: #ffffff;
+      border: 1px solid #ffffff;
     }
     .banner-animation {
       // width:40%;
@@ -43,12 +46,12 @@
       }
       h3 {
         font-size: 48px;
-        line-height: 57.6px;
+        line-height: 120%;
         width: 66%;
       }
     }
     .service-list {
-      margin-left: -20px;
+      padding: 0 10px;
       li {
         padding: 80px 40px;
         border: 1px solid #525252;
@@ -57,12 +60,8 @@
         & + li {
           margin-left: 15px;
         }
-        .img-container {
-          width: 25%;
-          img {
-            max-width: 100%;
-            height: auto;
-          }
+        .material-icons {
+          font-size: 80px;
         }
         h2 {
           font-size: 32px;
@@ -97,11 +96,10 @@
       &::after,
       &::before {
         content: "";
-        position: absolute;
+        position: sticky;
         width: 196px;
         height: 40px;
         top: 0;
-        // border: 1px solid yellow;
       }
       &::before {
         left: 0;
@@ -140,7 +138,7 @@
         border-radius: 16px;
         padding: 40px;
         height: 400px;
-        line-height: 24px;
+        line-height: 150%;
         background: rgba(255, 255, 255, 0.08);
         box-shadow: 0px 100px 80px rgba(18, 18, 18, 0.07),
           0px 41.7776px 33.4221px rgba(18, 18, 18, 0.0503198),
@@ -148,6 +146,9 @@
           0px 12.5216px 10.0172px rgba(18, 18, 18, 0.035),
           0px 6.6501px 5.32008px rgba(18, 18, 18, 0.0282725),
           0px 2.76726px 2.21381px rgba(18, 18, 18, 0.0196802);
+        .stars {
+          margin-bottom: 22px;
+        }
         .person {
           .avatar {
             margin-right: 16px;
@@ -179,12 +180,22 @@
       font-size: 48px;
       font-weight: 900;
       margin-bottom: 40px;
+      line-height: 120%;
+      .breakline {
+        display: none;
+      }
     }
-    a {
+    .check {
       font-size: 20px;
       padding: 20px 32px 20px 40px;
+      background-color: transparent;
+      color: #ffffff;
       border: 1px solid #ffffff;
       border-radius: 16px;
+      &:hover {
+        background-color: #ffffff;
+        color: #000000;
+      }
       & :first-child {
         margin-right: 10px;
       }
@@ -197,9 +208,8 @@
     .banner {
       h2 {
         font-size: 48px;
-        line-height: 57.6px;
       }
-      a {
+      .check {
         margin-bottom: 180px;
       }
       .banner-animation {
@@ -253,6 +263,9 @@
       h2 {
         font-size: 32px;
         text-align: center;
+        .breakline {
+          display: block;
+        }
       }
     }
   }

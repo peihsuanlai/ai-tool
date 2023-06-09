@@ -30,18 +30,21 @@
         <button type="button" class="hamburger-menu">
           <span class="material-icons"> menu </span>
         </button>
+        <button type="button" class="close-icon">
+          <span class="material-icons"> close </span>
+        </button>
         <ul class="menu d-none d-md-flex">
           <li class="me-3">
-            <a href="./home.html" class="text-decoration-none text-white"
+            <a href="./index.html" class="text-decoration-none text-white"
               >首頁</a
             >
           </li>
           <li><a href="#" class="text-decoration-none text-white">定價</a></li>
         </ul>
-        <div class="mobile-collapse show">
+        <div class="mobile-collapse">
           <ul class="mobile-menu">
             <li>
-              <a href="./home.html" class="text-white text-decoration-none"
+              <a href="./index.html" class="text-white text-decoration-none"
                 >首頁</a
               >
             </li>
@@ -102,13 +105,14 @@
             <div
               class="priceInfo d-flex justify-content-between align-items-center"
             >
-              <span>NT$5<span class="token">／1k tokens</span></span>
-              <a
-                href="#"
-                class="d-block d-flex justify-content-center align-items-center text-decoration-none text-white"
-                ><span>開始使用</span
-                ><span class="material-icons"> call_made </span></a
+              <span>NT$5<span class="token">/1k tokens</span></span>
+              <button
+                type="button"
+                class="check d-flex justify-content-center align-items-center"
               >
+                <span>開始使用</span>
+                <span class="material-icons">north_east</span>
+              </button>
             </div>
           </li>
           <li class="d-flex flex-column">
@@ -123,12 +127,13 @@
               class="priceInfo d-flex justify-content-between align-items-center"
             >
               <span>NT$5<span class="token">/1k tokens</span></span>
-              <a
-                href="#"
-                class="d-block d-flex justify-content-center align-items-center text-decoration-none text-white"
-                ><span>開始使用</span
-                ><span class="material-icons"> call_made </span></a
+              <button
+                type="button"
+                class="check d-flex justify-content-center align-items-center"
               >
+                <span>開始使用</span>
+                <span class="material-icons">north_east</span>
+              </button>
             </div>
           </li>
           <li class="d-flex flex-column">
@@ -142,12 +147,13 @@
               class="priceInfo d-flex justify-content-between align-items-center"
             >
               <span>NT$5<span class="token">/1k tokens</span></span>
-              <a
-                href="#"
-                class="d-block d-flex justify-content-center align-items-center text-decoration-none text-white"
-                ><span>開始使用</span
-                ><span class="material-icons"> call_made </span></a
+              <button
+                type="button"
+                class="check d-flex justify-content-center align-items-center"
               >
+                <span>開始使用</span>
+                <span class="material-icons">north_east</span>
+              </button>
             </div>
           </li>
           <li class="d-flex flex-column">
@@ -162,12 +168,13 @@
               class="priceInfo d-flex justify-content-between align-items-center"
             >
               <span>NT$5<span class="token">/1k tokens</span></span>
-              <a
-                href="#"
-                class="d-block d-flex justify-content-center align-items-center text-decoration-none text-white"
-                ><span>開始使用</span
-                ><span class="material-icons"> call_made </span></a
+              <button
+                type="button"
+                class="check d-flex justify-content-center align-items-center"
               >
+                <span>開始使用</span>
+                <span class="material-icons">north_east</span>
+              </button>
             </div>
           </li>
         </ul>
@@ -194,9 +201,13 @@
     </div>
     <div class="bg-white">
       <div class="container">
-        <h2 class="white-h2">這些超酷的應用，都來自 AI 工具王</h2>
+        <h2 class="white-h2">
+          這些超酷的應用，<br class="breakline" />都來自 AI 工具王
+        </h2>
         <div class="tools-search">
-          <img src="https://i.postimg.cc/RZhpDvL5/Vector.png" alt="search" />
+          <label for="search" class="search-icon">
+            <span class="material-icons">search</span>
+          </label>
           <input
             type="search"
             name="search"
@@ -205,7 +216,46 @@
           />
         </div>
         <div class="tools-filter">
-          <input type="button" value="篩選" />
+          <div class="filter-dropdown">
+            <button type="button" class="filter-dropdown-btn">
+              <span class="filter-dropdown-btnText">篩選</span>
+              <span class="material-icons"> filter_alt </span>
+            </button>
+            <div class="filter-dropdown-menu">
+              <span class="d-block title">AI模型</span>
+              <ul>
+                <li>
+                  <a href="#" class="item text-decoration-none">所有模型</a>
+                </li>
+                <li><a href="#" class="item text-decoration-none">卡卡</a></li>
+                <li><a href="#" class="item text-decoration-none">杰杰</a></li>
+                <li><a href="#" class="item text-decoration-none">琪琪</a></li>
+                <li><a href="#" class="item text-decoration-none">昊昊</a></li>
+              </ul>
+              <hr class="divider" color="#f2f2f2" />
+              <span class="d-block title">類型</span>
+              <ul>
+                <li>
+                  <a href="#" class="item text-decoration-none">問答服務</a>
+                </li>
+                <li>
+                  <a href="#" class="item text-decoration-none">虛擬客服</a>
+                </li>
+                <li>
+                  <a href="#" class="item text-decoration-none">生活應用</a>
+                </li>
+                <li>
+                  <a href="#" class="item text-decoration-none">程式知識</a>
+                </li>
+                <li>
+                  <a href="#" class="item text-decoration-none">翻譯助手</a>
+                </li>
+                <li>
+                  <a href="#" class="item text-decoration-none">行銷文案</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <ul class="menu">
             <li><a href="#" class="filter-btn">全部</a></li>
             <li><a href="#" class="filter-btn">問答服務</a></li>
@@ -215,12 +265,12 @@
             <li><a href="#" class="filter-btn">翻譯助手</a></li>
             <li><a href="#" class="filter-btn">行銷文案</a></li>
           </ul>
-          <div class="dropdown">
-            <button type="button" class="dropdown-btn">
-              <span class="dropdown-btnText">由新到舊</span>
+          <div class="order-dropdown">
+            <button type="button" class="order-dropdown-btn">
+              <span class="order-dropdown-btnText">由新到舊</span>
               <span class="material-icons"> expand_more </span>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="order-dropdown-menu">
               <li>
                 <a href="#" class="new-to-old text-decoration-none">由新到舊</a>
               </li>
@@ -335,7 +385,7 @@
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
-          <li><a href="#">></a></li>
+          <li><a href="#" class="material-icons">keyboard_arrow_right</a></li>
         </ul>
       </div>
     </div>
@@ -407,7 +457,7 @@
       >
         <ul class="sitemap-list">
           <li>
-            <a href="./home.html" class="text-white text-decoration-none"
+            <a href="./index.html" class="text-white text-decoration-none"
               >首頁</a
             >
           </li>
@@ -415,12 +465,11 @@
             <a href="#" class="text-white text-decoration-none">定價</a>
           </li>
         </ul>
-        <div class="sitemap-logo">
-          <img
+        <a href="#" class="sitemap-logo"
+          ><img
             src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
             alt="logo"
-          />
-        </div>
+        /></a>
       </div>
       <div
         class="footer d-flex align-items-center justify-content-between flex-wrap"
@@ -437,12 +486,10 @@
             <a href="#" class="text-decoration-none text-white">Instagram</a>
           </li>
         </ul>
-        <a
-          href="#top"
-          class="top text-decoration-none text-white d-block d-flex align-items-center"
-          ><span>Back to top</span
-          ><span class="material-icons"> arrow_upward</span></a
-        >
+        <button class="top d-flex align-items-center">
+          <span>Back to top</span
+          ><span class="material-icons"> arrow_upward</span>
+        </button>
       </div>
     </div>
 
