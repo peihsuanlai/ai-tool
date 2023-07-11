@@ -141,14 +141,12 @@ table {
 }
 
 body {
-  max-width: 1920px;
   background-color: #000000;
   color: white;
   font-family: "Noto Sans TC", sans-serif;
 }
 
 .bg-white {
-  max-width: 1920px;
   background-color: white;
   border-radius: 160px;
   color: #020202;
@@ -205,7 +203,7 @@ body {
 .container .header .mobile-collapse {
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   top: 100%;
   width: 100%;
   min-height: calc(100vh - 81px);
@@ -216,10 +214,11 @@ body {
   display: block;
 }
 .container .header .mobile-collapse .mobile-menu {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
+  height: calc(100vh - 228px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .container .header .mobile-collapse .mobile-menu a {
   font-size: 80px;
@@ -318,6 +317,15 @@ body {
   font-weight: 900;
   padding-left: 40px;
   margin-bottom: 10px;
+}
+.container .tools-filter .filter-dropdown-menu .breakline::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 46%;
+  height: 10px;
+  width: 65%;
+  border-top: 1px solid #f2f2f2;
 }
 .container .tools-filter .filter-dropdown-menu .item {
   display: block;
@@ -819,9 +827,6 @@ body {
   }
   .container .partner h2 {
     font-size: 20px;
-  }
-  .container .partner ul li {
-    width: 30%;
   }
   .container .swiper .recommend li + li {
     margin-left: 0;
